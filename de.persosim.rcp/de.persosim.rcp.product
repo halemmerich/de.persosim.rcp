@@ -3,6 +3,7 @@
 
 <product name="PersoSim RCP" uid="de.persosim.rcp.product" id="de.persosim.rcp.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="0.5.0.qualifier" useFeatures="false" includeLaunchers="true">
 
+
    <configIni use="default">
    </configIni>
 
@@ -24,13 +25,17 @@
       </win>
    </launcher>
 
+
    <vm>
    </vm>
 
+
    <plugins>
       <plugin id="com.ibm.icu"/>
+      <plugin id="de.persosim.consoleLogger"/>
       <plugin id="de.persosim.driver.connector"/>
       <plugin id="de.persosim.driver.connector.ui"/>
+      <plugin id="de.persosim.fileLogger"/>
       <plugin id="de.persosim.rcp"/>
       <plugin id="de.persosim.simulator"/>
       <plugin id="de.persosim.simulator.ui"/>
@@ -128,5 +133,13 @@
       <plugin id="org.w3c.dom.svg"/>
    </plugins>
 
+   <configurations>
+      <plugin id="de.persosim.consoleLogger" autoStart="true" startLevel="0" />
+      <plugin id="de.persosim.fileLogger" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+   </configurations>
 
 </product>
